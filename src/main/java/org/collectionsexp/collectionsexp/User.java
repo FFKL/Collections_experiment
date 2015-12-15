@@ -24,10 +24,11 @@ public class User {
      */
     @Override
     public String toString() {
-        return " ID: " + id +
+        /*return " ID: " + id +
                 " Имя: " + name +
                 " Возраст: " + age +
-                " Пол: " + (sex ? "Мужской" : "Женский");
+                " Пол: " + (sex ? "Мужской" : "Женский");*/
+        return "" + this.hashCode();
     }
 
     /**

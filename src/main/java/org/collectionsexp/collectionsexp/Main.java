@@ -18,21 +18,26 @@ public class Main {
         System.out.println(first.equals(first0));
         System.out.println(first.equals(second));
 
-        Map<User, Integer> userMap = new HashMap<User, Integer>();
-        userMap.put(first, 55);
-        userMap.put(second, 66);
-        userMap.put(third, 77);
-        //userMap.put(first0, 88);
+        Map<User, Pet> userMap = new HashMap<User, Pet>();
+        Pet cat = new Pet("Vaska", 2);
+        Pet dog = new Pet ("Polka", 3);
+        Pet cat0 = new Pet("Vaska", 2);
+        userMap.put(first, cat);
+        userMap.put(second, dog);
+        userMap.put(third, cat0);
+        userMap.put(first0, dog);
         System.out.println("Get: " + userMap.get(first0));
+        System.out.println(dog.equals(dog));
         System.out.println("Size: " + userMap.size());
-        System.out.println("ContainsValue " + userMap.containsValue(88));
+        System.out.println("ContainsValue " + userMap.containsValue(cat0));
         System.out.println("ContainsKey " + userMap.containsKey(first0));
+        System.out.println(userMap);
 
         Set<User> userSet = new HashSet<User>();
         userSet.add(first);
         userSet.add(second);
         userSet.add(third);
-        //userSet.add(first0);
+        userSet.add(first0);
         System.out.println(userSet);
         System.out.println(userSet.contains(first0));
     }

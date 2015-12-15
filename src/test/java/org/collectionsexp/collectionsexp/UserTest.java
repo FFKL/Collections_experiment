@@ -45,4 +45,10 @@ public class UserTest {
         for (int i = 0; i < 10; ++i)
             assertEquals(user1, user2);
     }
+
+    @Test
+    public void equalsNull() {
+        User user1 = (new User(1, "Дима", 22, true));
+        assertFalse(user1.equals(null));
+    }
 }
